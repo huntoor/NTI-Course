@@ -1,0 +1,72 @@
+/* Bootstrap Override */
+.bg-teal {
+  background-color: var(--bs-teal) !important;
+}
+
+.bg-orange {
+  background-color: var(--bs-orange) !important;
+}
+
+.bg-yellow {
+  background-color: var(--bs-yellow) !important;
+}
+
+.bg-green {
+  background-color: #83caa8 !important;
+}
+
+.bg-gray {
+  background-color: var(--bs-gray-100) !important;
+}
+
+.border-teal {
+  border-color: var(--bs-teal) !important;
+}
+
+.text-orange {
+  --bs-text-opacity: 1;
+  color: var(--bs-orange) !important;
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+/* My Style */
+.to-upper {
+  text-transform: uppercase;
+}
+
+/* Home Section */
+section#home {
+  background: url(../images/bg.jpg) top center/cover;
+}
+
+section#home .row div:hover {
+  --bs-bg-opacity: 0.5;
+  background-color: rgba(253, 126, 20, var(--bs-bg-opacity)) !important;
+}
+
+/* Home Section End */
+
+/* Process Section*/
+section#process {
+  background: white url(../images/process-bg.jpg) center/cover;
+  background-blend-mode: multiply;
+}
+
+section#process .row {
+  counter-reset: card;
+}
+
+section#process .row div::before {
+  counter-increment: card;
+  content: counter(card);
+  height: fit-content;
+  position: absolute;
+  top: -35px;
+  left: 0;
+  font-size: 6rem;
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 0.2);
+}
